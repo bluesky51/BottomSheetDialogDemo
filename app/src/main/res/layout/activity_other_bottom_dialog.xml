@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.apple.bottomsheetdialogdemo.OtherBottomDialogActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="点击弹窗" />
+    </LinearLayout>
+
+    <!--app:behavior_peekHeight="300dp": 弹出后显示的高度为300dp。
+    app:layout_behavior="@string/bottom_sheet_behavior"" 表示是一个bottom sheet。
+    app:behavior_hideable="true" ： 定义是否可以下滑隐藏bottom sheet
+     -->
+    <RelativeLayout
+        android:id="@+id/design_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:background="@android:color/holo_green_light"
+        android:paddingBottom="20dp"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="300dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <TextView
+            android:id="@+id/bottomsheet_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Introducing Bottom Sheets"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
